@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #dedede;
+}
+
+.account_buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px;
+}
+
+.add_account, .delete_account {
+  background: #3498db;
+  padding: 10px 15px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #2980b9;
+  transition: background 0.3s ease;
+}
+.delete_account {
+  background: #e74c3c;
+  border-color: #c0392b;
+}
+.add_account:hover {
+  background: #2980b9;
+}
+.delete_account:hover {
+  background: #c0392b;
+}
+
+/* Status Popup */
+.status_popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffffff;
+  color: #333;
+  border-left: 6px solid green;
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+  z-index: 10000;
+}
+.status_popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.status_popup i {
+  font-size: 20px;
+  color: green;
+}
+.status_popup.error i {
+  color: red;
+}
+
+/* Confirmation Popup Box */
+.popup_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  user-select: none;
+  width: 400px;
+  background: #f2f2f2;
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #b3b3b3;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.popup_box.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.popup_box i {
+  font-size: 60px;
+  color: #eb9447;
+  border: 5px solid #eb9447;
+  padding: 20px 40px;
+  border-radius: 50%;
+  margin: -10px 0 20px 0;
+}
+.popup_box h1 {
+  font-size: 30px;
+  color: #1b2631;
+  margin-bottom: 5px;
+}
+.popup_box label {
+  font-size: 23px;
+  color: #404040;
+}
+.popup_box .btns {
+  margin-top: 40px;
+}
+.btns .btn1, .btns .btn2 {
+  background: #999999;
+  color: white;
+  font-size: 18px;
+  padding: 10px 13px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btns .btn2 {
+  background: #ff3333;
+  margin-left: 20px;
+  border: 1px solid #cc0000;
+}
+.btns .btn1:hover {
+  background: #8c8c8c;
+}
+.btns .btn2:hover {
+  background: #e60000;
+}

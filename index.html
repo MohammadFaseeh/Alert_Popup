@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Actions</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/ad993e1f31.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="account_buttons">
+    <a href="#" class="add_account">Add Account</a>
+    <a href="#" class="delete_account">Delete Account</a>
+  </div>
+
+ <div class="status_popup" id="statusPopup">
+  <i id="statusIcon" class="fas fa-check-circle"></i>
+  <p id="statusText">Account added successfully!</p>
+</div>
+
+  <div class="popup_box" id="confirmPopup">
+  <i class="fas fa-exclamation-triangle"></i>
+  <h1>Are you sure?</h1>
+  <label>This action will delete the account permanently.</label>
+  <div class="btns">
+    <button class="btn1" id="cancelDelete">Cancel</button>
+    <button class="btn2" id="confirmDelete">Confirm Delete</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
